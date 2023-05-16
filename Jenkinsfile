@@ -61,7 +61,7 @@ stages{
                 steps
                 {
                     //building tar directory 
-                    sh 'cd /var/lib/jenkins/workspace/unit-test/ && tar -czvf /var/lib/jenkins/workspace/unit-test/build.tar.gz /var/lib/jenkins/workspace/unittest/build/'
+                    sh 'cd /var/lib/jenkins/workspace/unit-test/ && tar -czvf /var/lib/jenkins/workspace/unit-test/build.tar.gz /var/lib/jenkins/workspace/unit-test/build/'
                     echo "tar directory generated"
                 }
             }    
@@ -74,7 +74,7 @@ stages{
                 }
                 post{
                          always{
-                         mail to: "shreya.dhanbhar@bluebinaries.com, nikita.mankar@bluebinaries.com",
+                         mail to: "shreya.dhanbhar@bluebinaries.com",
                          subject: "Artifacts Uploaded",
                          body: "${BUILD_NUMBER}_Passed! Uploaded Artifacts to Nexus repo successfully"
                          }
@@ -94,7 +94,7 @@ stages{
       }
                 post{
                         failure{
-                        mail to: "shreya.dhanbhar@bluebinaries.com, nikita.mankar@bluebinaries.com",
+                        mail to: "shreya.dhanbhar@bluebinaries.com",
                         subject: "Failure",
                         body: "${BUILD_NUMBER}_FAIL!"
                             }
