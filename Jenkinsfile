@@ -37,7 +37,7 @@ stages{
                 }
                      post{
                              always{
-                             mail to: "shreya.dhanbhar@bluebinaries.com, nikita.mankar@bluebinaries.com",
+                             mail to: "nikita.mankar@bluebinaries.com",
                              subject: "Build Success",
                              body: "${BUILD_NUMBER}_Passed!"
                              }
