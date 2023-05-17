@@ -16,7 +16,7 @@ stages{
                 {  
                     echo "Clone started"
                     // Clone the repository using Git
-                    sh 'cd /var/lib/jenkins/workspace/ && git clone https://https://github.com/NikitaMankar121093/unit-test-1.git'
+                    sh 'cd /var/lib/jenkins/workspace/ && git clone https://github.com/NikitaMankar121093/unit-test-1.git'
                     sh 'rm -rf /var/lib/jenkins/workspace/unit-test-1/lib'
                     sh 'mkdir /var/lib/jenkins/workspace/unit-test-1/lib'
                     sh 'cd /var/lib/jenkins/workspace/unit-test-1/lib/ && git clone https://github.com/google/googletest.git'
