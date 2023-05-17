@@ -8,7 +8,7 @@ stages{
                 {
                     cleanWs()
                     sh 'cd /var/lib/jenkins/workspace/*'
-                    sh 'rm -rf /var/lib/jenkins/workspace/*'
+                    sh 'sudo rm -rf /var/lib/jenkins/workspace/*'
                 }
             }
         stage('Cloning')
